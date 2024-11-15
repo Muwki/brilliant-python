@@ -1,0 +1,108 @@
+New Math Operations
+We're almost ready for our first programming challenge, 
+but we'll need two more math operations first: // and %.
+
+
+print(9//3)
+print(10//3)
+print(11//3)
+print(12//3)
+
+3
+3
+3
+4
+
+ What does the // operator do?
+It's like / but rounds down to a whole number.
+
+  The // operator divides and then discards the remainder, 
+  rounding down to the whole number.
+
+What does the % operator do?
+
+The % operator returns the remainder after dividing.
+
+
+These operators let us divide numbers into the largest integer
+  (//) and return the remainder (%). They'll be helpful for solving the following challenge.
+-------------------------
+seconds = 155
+minutes = seconds/60
+
+print(seconds , "seconds is the same as")
+print(minutes , "minutes")
+  155 seconds is the same as
+2.5833333333333335 minutes
+
+-------------------
+  seconds = 155
+minutes = seconds // 60
+leftover_seconds = seconds % 60
+
+print(seconds , "seconds is the same as")
+print(minutes , "minutes and" , leftover_seconds,  "seconds")
+
+  ------
+
+seconds = 155
+# use // to get whole minutes
+minutes = seconds // 60
+# use % to get the leftover seconds  
+leftover_seconds = seconds % 60
+
+print(seconds , "seconds is the same as")
+print(minutes , "minutes and" , leftover_seconds,  "seconds")
+
+155 seconds is the same as
+2 minutes and 35 seconds
+  Whole minutes are calculated on line 3 using //, and the remainder is calculated on line 5 using %.
+  -------------
+How many hours does this take? (We'll figure out the exact minutes and seconds next).
+
+seconds = 14926
+hours = seconds // 3600
+
+print(str(seconds) , "seconds is the same as")
+print(str(hours) , "hours," , "with some remaining minutes and seconds")
+  ---------------------
+
+  Complete the program to find the exact number of whole hours, whole minutes and remaining seconds.
+  Complete the program. You might find it useful to take advantage of the variable defined on line 5. If not, you can delete it.
+
+  seconds = 14926
+hours = seconds // 3600
+leftover_seconds = seconds % 3600
+minutes = leftover_seconds // 60
+
+final_seconds = leftover_seconds % 60
+
+print(str(seconds) , "seconds is the same as")
+print(str(hours) , "hours," , minutes  , "minutes, and" , final_seconds , "seconds")
+-----------
+14926 seconds is the same as
+4 hours, 8 minutes, and 46 seconds
+----------------------------
+  Here's one approach to solving this challenge:
+To figure out the number of hours, divide the number of seconds by 3600.
+To get the remaining minutes and seconds, take the remainder of seconds % 3600.
+To get the remaining minutes from the leftover seconds, divide by 60.
+To get the remaining seconds from the leftover seconds, take the remainder of leftover_seconds % 60.
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
