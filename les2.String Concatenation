@@ -1,0 +1,13 @@
+String Concatenation
+samen voeging van woorden in python
+code:
+print("Py" + "thon")
+ouput: Python
+
+The + operator concatenates two strings combining them into a single string.
+
+code:
+print("Welcome to Python!")
+
+print("Welcome to"   "Py"+thon!")
+output van beide is Welcome to Python!
