@@ -1,0 +1,68 @@
+Computers are excellent at repetitive tasks — 
+one valuable programming tool for handling repetition is a loop.
+for i in range(5):
+    print("test") # add a message here
+test
+test
+test
+test
+test
+---------------
+number = 5               # start with 5
+for i in range(3):       # do this 3 times
+    number = number + 2  # add 2 to the number
+print(number)
+11
+------------
+Each of these programs used a loop.
+A loop is a section of code that can run multiple times.
+print("You say goodbye")
+print("and I say hello")
+for i in range(3):
+    print("Hello")
+    print("Goodbye")
+Hello
+Goodbye
+Hello
+Goodbye
+Hello
+Goodbye
+--------------------
+For a line of code to be “inside” the loop, it needs to be indented.
+Indentation is an important part of syntax when programming loops.
+for i in range(3):
+    print("Hello")        # this is in the loop
+    print("Goodbye")      # this is also in the loop
+print("Goodbye forever")  # this is outside the loop
+
+Hello
+Goodbye
+Hello
+Goodbye
+Hello
+Goodbye
+Goodbye forever
+--------------
+These programs use a particular type of loop called a for loop — 
+it runs for a number of times that is determined by the number inputted to range.
+for number in range(5):
+    print(number)
+0
+1
+2
+3
+4
+--------
+
+For loops in Python are “zero-indexed”, 
+which means they start counting from 0 rather than 1.
+
+That's why in the last program, number started at 0 on the first loop, 
+was 1 for the second loop, 2 for the third loop, and so on.
+
+---------
+for number in range(10):
+    print(number)
+prints numbers from 0-9.
+
+
