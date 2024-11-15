@@ -1,0 +1,33 @@
+Variables
+The first line of this program is an instruction that stores 
+a string in the variable named message.
+
+message = "Welcome to Python!"
+print(message)
+Welcome to Python
+
+A variable is simply a placeholder for a value,
+so the program will print the value stored in the variable message.
+
+A variable in a program acts like a container. 
+It can be used to store a string, a number, or other kinds of data.
+
+The = operator is used to assign a value to a variable.
+
+To update the value of a variable, change the value to the right of the =.
+
+To change the name of the variable, update the word to the left of the =.
+
+message = "Welcome to Python!"
+print(message + message)
+Welcome to Python!Welcome to Python!
+
+Variables are simply placeholders, so the program concatenates 
+the string value stored in message. vanwege de +
+
+Variables containing strings can be concatenated the same way that strings can be concatenated.
+
+Variables can be used as many times as needed in a single program.
+
+
+
