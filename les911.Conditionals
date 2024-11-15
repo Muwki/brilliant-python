@@ -1,0 +1,3 @@
+Conditionals
+In many programs, different inputs should lead to different outputs.
+One way to implement this is using an if statement.
