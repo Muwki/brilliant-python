@@ -1,0 +1,27 @@
+Combining Numbers and Strings
+print("My age is " + 27)
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+
+Using a + to combine a string and a number results in an error called a TypeError because they are different data types.
+
+The + operator works differently for numbers and strings.
+
+print("My favorite number is " , 65)
+
+Another approach is to use a , to join values and display them.
+The input after the , is treated as its own print statement, so it can be used to combine strings and numbers.
+
+Here's another program that uses concatenation.
+print("Our combined age is" , 27 + 32)
+Our combined age is 59
+
+print("Our combined age is 27" + "32")
+
+print("Our combined age is" , 27 + 32)
+Our combined age is 2732
+Our combined age is 59
+
+Different data types in Python follow their own rules and need to be treated differently.
