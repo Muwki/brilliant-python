@@ -1,0 +1,31 @@
+Variable Reuse
+Let's dive deeper into how variables work and what they're capable of.
+Here's a simple program that sets a message variable and then uses print to display it.
+
+message = "Hi, I'm learning Python"
+print(message)
+Hi, I'm learning Python
+
+message = "Hi I'm Joe"
+message = "I'm a lifelong learner"
+message = "I'm learning to code"
+print(message)
+I'm learning to code
+
+The value stored in a variable can change throughout a program. When that variable is called,
+the program uses the most recently assigned value.
+
+num = 3
+num = num + 2
+num = num * 2 
+print(num)
+10
+
+num = 3
+num = num + num
+num = num * 2 
+print(num)
+12
+A variable can be updated using its current value.
+
+Clever reuse of variables can make for much shorter programs.
