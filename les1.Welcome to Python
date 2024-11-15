@@ -1,0 +1,25 @@
+Python is one of the most popular programming languages — 
+it's been used to write millions of computer programs.
+
+print("Welcome to Python!")
+
+In Python, quotes indicate that text is a string.
+Strings are used to represent text. They can include letters, numbers, symbols, and whitespace characters.
+
+Change the output of the program by editing the text within the quotation marks. 
+To restore the program to its original state, press “Reset Code”.
+
+Update the program to print “Welcome to Brilliant!”
+
+print (“Welcome to Brilliant!”)
+----
+print(Programming is fun)
+Since the words Programming is fun aren't in quotes, they are treated as unknown instructions and cause an error.
+
+An error occurs when a program can't run. Even expert programmers trigger errors all the time.
+
+juiste code is.
+print("Programming is fun")
+why
+Quotes indicate that this text is a string and not a command.
+
