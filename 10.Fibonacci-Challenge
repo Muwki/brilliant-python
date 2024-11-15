@@ -1,0 +1,50 @@
+In the Fibonacci sequence, each number is the sum of the previous two numbers.
+
+The sequence starts with 0 and 1. The third term would then be 
+0+1=1. Here are the first five terms:
+1st: 0
+2nd:     1
+3rd: 0 + 1 = 1
+4th:     1 + 1 = 2 
+5th:         1 + 2 = 3
+
+Bij fibonacci-challenge worden de twee vorige antwoorden op geteld om de volgende te krijgen
+
+Write a program that calculates the Fibonacci sequence out to the 20th term based on any two starting values.
+Here's a starting point for printing out 20 numbers. Be careful to use the same spacing to indent everything inside of the loop.
+--
+Complete the program so that it outputs the first 20 terms of the Fibonacci sequence.
+With a as the number from two steps ago and b as the last number, 
+the sequence is followed by having each loop calculate c = a + b then updating a and b
+— making sure to update a before b, otherwise a would use b's updated value instead of its old value.
+
+a = 0
+print(a)
+b = 1
+print(b)
+for i in range(18):
+    c = a + b # next term
+    print(c)
+    a = b     # update 2 previous terms
+    b = c     # update prior term 
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181

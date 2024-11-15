@@ -1,9 +1,0 @@
-In the Fibonacci sequence, each number is the sum of the previous two numbers.
-
-The sequence starts with 0 and 1. The third term would then be 
-0+1=1. Here are the first five terms:
-1st: 0
-2nd:     1
-3rd: 0 + 1 = 1
-4th:     1 + 1 = 2 
-5th:         1 + 2 = 3
