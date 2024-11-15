@@ -64,6 +64,6 @@ was 1 for the second loop, 2 for the third loop, and so on.
 for number in range(10):
     print(number)
 prints numbers from 0-9.
-
+---------------
 Loops are an invaluable part of a programming arsenal, 
 as programs often need to repeat the same task many times.
