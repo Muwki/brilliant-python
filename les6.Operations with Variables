@@ -1,0 +1,31 @@
+Operations with Variables
+number = 7
+print(number + number)
+14
+The value in the variable number is added to itself and the result is displayed.
+
+Variables can store all different data types, including strings and numbers.
+
+num = 7
+message = "My favorite number is "
+print(message + num)
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+TypeError: must be str, not int
+
+In this program, one variable stores a number and another stores a string 
+so it will result in the same error as any program that tries to combine numbers and strings.
+
+Variables are simply placeholders, so they behave according to the rules of the data type they contain.
+
+num = 7
+message = "My favorite number is "
+print(message , num)
+My favorite number is 7
+
+
+
+
+
+
