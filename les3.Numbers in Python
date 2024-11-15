@@ -1,0 +1,17 @@
+Numbers in Python
+print(9)
+9
+
+The print command displays both strings and numbers.
+print(7 + 12)
+19
+
+Python can perform all the standard arithmetic operations on numbers:
+
+addition with +
+
+subtraction with -
+
+multiplication with *
+
+division with /, etc.
