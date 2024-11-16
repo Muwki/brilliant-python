@@ -1,0 +1,181 @@
+Conditions with Loops
+Conditionals can be especially useful when a program loops through a range of values.
+for price in range(5):
+    if price < 5:
+        print("I can pay", price)
+    else:
+        print("No deal")
+I can pay 0
+I can pay 1
+I can pay 2
+I can pay 3
+I can pay 4
+-------------
+Which of the following conditions for line 2
+would lead to this program outputting “No deal” exactly once?
+price < 4
+
+The indexing in a for loop using range(5) starts at 0 and ends at 4. 
+All of these are less than 5, so using the condition price < 5 will never output “No deal”.
+----
+for price in range(5):
+    if price < 4:
+        print("I can pay", price)
+    else:
+        print("No deal")
+I can pay 0
+I can pay 1
+I can pay 2
+I can pay 3
+No deal
+
+Using price < 4 will output “No deal” once, 
+since the last value of price is equal to 4, not less than it.
+-----
+Using price < 3 leads to two instances of “No deal”, 
+since the third largest price is equal to 3 but the largest and second largest price are both greater.
+for price in range(5):
+    if price < 3:
+        print("I can pay", price)
+    else:
+        print("No deal")
+---------------------
+
+wallet = 25
+
+for price in range(5):
+    if price < 10:
+        wallet = wallet - price
+        print("Now I have",wallet)
+        
+print("Final amount:",wallet)
+Now I have 25
+Now I have 24
+Now I have 22
+Now I have 19
+Now I have 15
+Final amount: 15
+-------------
+
+What should the condition on line 4 be changed to 
+so that wallet can't decrease below 0?
+(wallet should still be able to decrease to 0 and values above 0.)
+
+wallet = 25
+
+for price in range(10):
+    if wallet >= price:
+        wallet = wallet - price
+        print("Now I have",wallet)  
+print("Final amount:",wallet)
+
+Now I have 25
+Now I have 24
+Now I have 22
+Now I have 19
+Now I have 15
+Now I have 10
+Now I have 4
+Final amount: 4
+
+Using wallet >= price means the code that decreases wallet by price 
+will only run in cases where that decrease can't take wallet below 0.
+---
+Conditionals can be helpful for ensuring that code only runs in a loop when it's appropriate,
+such as only making purchases if there's money remaining.
+Sometimes it doesn't make sense to complete all the repetitions of a loop.
+----------------
+wallet = 8
+
+for price in range(10):
+    if wallet >= price:
+        wallet = wallet - price
+        print("I have",wallet,"left")
+    else:
+        print("I can't afford any more")
+        break
+I have 8 left
+I have 7 left
+I have 5 left
+I have 2 left
+I can't afford any more
+
+The break command quits a loop early.
+This is useful when continuing to run the loop wouldn't actually execute any commands.
+----------
+This program simulates buying socks of varying prices one at a time.
+wallet = 25
+socks = 0
+
+for price in range(10):
+    if wallet >= price:
+        wallet = wallet - price
+        socks = socks + 1
+    else:
+        break
+        
+print("I have",wallet,"dollars")
+print("and",socks,"socks")
+I have 4 dollars
+and 7 socks
+-----
+If we want the program to announce whether the socks can be paired up 
+rather than the total number of socks, which condition should be checked?
+
+answer:If socks is even
+
+Explanation
+In order to announce if the socks can be paired up,
+we should check if there is an even number of socks.
+If socks is even, they can be paired up — if socks is odd, they can't.
+---
+Which of these operators easily lets us check if a value is even?
+% (division only returning the remainder)
+
+An even number is one that can be divided by 2 with no remainder. 
+x % y gives us the remainder from dividing x by y. 
+If number % 2 is 0, number is even.
+-------------
+Add a condition to line 11 so this program outputs whether or not you can pair your socks.
+wallet = 25
+socks = 0
+
+for price in range(10):
+    if wallet >= price:
+        wallet = wallet - price
+        socks = socks + 1
+    else:
+        break
+        
+if (socks % 2 == 0):   
+    print("I can pair my socks")
+else:
+    print("I need one more ...")
+
+Explanation
+socks % 2 == 0 will be true if socks is even and false if socks is odd. 
+Testing out different starting values for wallet will reveal
+which ones lead to an even socks value and which lead to an odd socks value. 
+In the initial program wallet = 25 does not work, but wallet = 20 will work.
+
+wallet = 20 # change number to see outcomes
+socks = 0
+
+for price in range(10):
+    if wallet >= price:
+        wallet = wallet - price
+        socks = socks + 1
+    else:
+        break
+        
+if socks % 2 == 0: 
+    print("I can pair my socks")
+else:
+    print("I need one more...")
+
+I can pair my socks
+---------
+An understanding of loops, conditionals, 
+and a few commands equip a programmer with a powerful set of skills.
+
+
