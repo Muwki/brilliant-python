@@ -1,3 +1,93 @@
 Conditionals
 In many programs, different inputs should lead to different outputs.
 One way to implement this is using an if statement.
+---
+price = 10    # bananas usually cost 10
+if price < 10:
+    print("Bananas are on sale!")
+else:
+    print("Bananas cost $10")
+Bananas cost $10
+-------
+If you set price to 8, what will this program output?
+Bananas are on sale!
+----
+price = 12    # bananas usually cost 10
+if price < 10:
+    print("Bananas are on sale!")
+else:
+    print("Bananas cost $10")
+What do you think this program outputs if price is set to 12?
+
+Bananas cost $10
+-------------
+price = 12    # bananas usually cost 10
+if price < 10:
+    print("Bananas are on sale!")
+else:
+    print("Bananas cost $10")
+Bananas cost $10
+If we raise price to 12, the program incorrectly states that bananas costs $10.
+---
+price = 12  
+if price < 10:
+    print("Bananas are on sale!")   # code inside if
+elif price > 10:
+    print("Bananas are expensive")  # code inside elif
+else:
+    print("Bananas cost $10")       # code inside else
+print("I'll buy a few")             # this always runs
+Bananas are expensive
+I'll buy a few
+
+If the condition isn't met, the next condition in the elif (short for “else if”) is checked. 
+If none of the conditions are met, the code inside the else block runs.
+----------------
+To compare whether two values are equal in Python, == is used. 
+This is to differentiate from =, which tells Python to set a variable.
+
+price = 10    # bananas usually cost 10
+if price < 10:
+    print("Bananas are on sale!")
+elif price == 0:
+    print("Bananas are free!")
+elif price > 10:
+    print("Bananas are expensive")
+else:
+    print("Bananas cost $10")
+Bananas cost $10
+-----------------
+The conditions in an if sequence are checked in order from top to bottom.
+** Once a condition is met, 
+the corresponding code block runs and the rest of the conditions are skipped.
+--------------
+price = 0    # bananas usually cost 10
+if price < 10:
+    print("Bananas are on sale!")
+elif price == 0:
+    print("Bananas are free!")
+elif price > 10:
+    print("Bananas are expensive")
+else:
+    print("Bananas cost $10")
+Bananas are on sale!
+Explanation
+The condition price == 0 is true when price is 0, 
+but even in this case, the program won't output “Bananas are free!”.
+---
+This is because if price is 0,
+the price < 10 condition is also met, and it is checked first.
+---
+price = 0  
+if price == 0:
+    print("Bananas are free!")
+elif price < 10:
+    print("Bananas are on sale!")
+elif price > 10:
+    print("Bananas are expensive")
+else:
+    print("Bananas cost $10")
+Bananas are free!
+--------
+Conditionals let the same program run different commands depending on the data it receives.
+
