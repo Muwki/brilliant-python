@@ -1,0 +1,110 @@
+Reading Code
+Take a look at this program, and try to predict what it'll output:
+from turtle import *
+
+color('red')
+forward(200)
+left(90)
+forward(200)
+left(90)
+forward(200)
+left(90)
+forward(200)
+
+bye()
+output : program draws a square.
+----------
+Let's unpack each line of code.
+In this program, what does the command forward(200) on line 4 do?
+
+The command forward(200) on line 4 
+moves the turtle 200 pixels in the direction it's facing,
+which is to the right. The turtle always starts facing right.
+
+What does the 90 in the command left(90) on line 5 do?
+The command left(90) turns the turtle to the left 
+by the number of degrees specified within the parentheses.
+In this program, the command left(90) specifies that the turtle 
+should be turned 90 degrees to the left:
+If the command had been right(90), 
+the turtle would have turned 90 degrees to the right instead.
+--------------
+In the previous programs, you had to predict what each line of the program did. 
+Typically, programmers use comments to explain their code 
+in plain English so that anyone can understand it.
+
+Here's the previous program, annotated with comments based on what we've learned:
+
+from turtle import * # Loads commands used to draw
+
+color('red') 
+forward(200) # Moves the turtle 200 pixels right
+left(90) # Turn left 90 degrees
+# Turtle is now facing up
+forward(200) 
+left(90) 
+forward(200)
+left(90) 
+forward(200)
+
+bye() # Tells the turtle we're done writing commands
+--------
+Comments start with hash sign #. Everything after the # until the end of the line 
+is considered a comment and not part of the program, so the program will ignore the text when it runs.
+------
+What does the command forward(200) on line 6 do?
+from turtle import *
+
+color('red')
+forward(200)
+left(90)
+forward(200) # What does this do?
+left(90)
+forward(200)
+left(90)
+forward(200)
+
+bye()
+---
+The command forward(200) moves the turtle “forward” in whichever direction it's facing.
+On line 6 the turtle is facing up since the Turtle turned 90 degrees to the left on line 5.
+Each of the four forward(200) in this program moves the turtle in different directions:
+-----
+The command forward(200) moves the turtle “forward” in whichever direction it's facing. 
+On line 6 the turtle is facing up since the Turtle turned 90 degrees to the left on line 5.
+-----
+from turtle import * # Loads commands used to draw
+
+color('red') 
+forward(200) # Moves the turtle 200 pixels right
+left(90) # Turn left 90 degrees, now facing up
+forward(200) # Moves the turtle 200 pixels up
+left(90) 
+forward(200)
+left(90) 
+forward(200)
+
+bye() # Tells the turtle we're done writing commands.
+----
+In this program, each of the four forward(200) commands
+moves the turtle in different directions.
+
+Here's an annotated version of the program
+that we've been exploring that explains what each line does using comments.
+
+from turtle import * # Loads commands used to draw
+
+color('red') # Sets drawing color to red
+forward(200) # Moves the turtle 200 pixels forward, i.e. right
+left(90) # Turn left 90 degrees
+# Turtle is now facing up
+forward(200) # Moves 200 pixels forward, i.e. up 
+left(90) # Turn left 90 degrees
+# Turtle now facing left 
+forward(200) # Moves 200 pixels forward, i.e. left
+left(90) # Turn left 90 degrees
+# Turtle now facing down
+forward(200) # Complete bottom of the square
+
+bye() # Tells the turtle we're done writing commands
+
