@@ -1,0 +1,99 @@
+Built-in Functions
+In previous lessons, we learned about the forward and left commands, 
+which are known as functions. In this lesson, we'll explore a few more functions.
+
+Let's revisit the program to draw a square from the last lesson.
+What do you think will happen if we change the command on line 3 
+from color('blue') to color('dark turquoise')?
+
+from turtle import *
+
+color('dark turquoise') # color('blue')
+forward(200)
+left(90)
+forward(200)
+left(90)
+forward(200)
+left(90)
+forward(200)
+
+bye()
+--
+The color command controls the color of the Turtle. 
+Python knows a number of colors that can go in the parentheses of the color command.
+
+Python has many colors to choose from, including dark turquoise. 
+Try picking another color from this list to change the color of 
+the square in the program above.
+--
+https://en.wikipedia.org/wiki/X11_color_names#Color_name_chart
+--
+What color do you think the left side of the square will be in this program?
+
+from turtle import *
+
+color('dark turquoise')
+forward(200)
+left(90)
+color('fuchsia')
+forward(200)
+left(90)
+color('deep sky blue')
+forward(200)
+left(90)
+color('hot pink')
+forward(200)
+
+bye()
+--
+It'll be hot pink.
+
+The color function sets the color of all lines drawn after it,
+until the color is changed again.
+
+The left side of the square is the 4th line drawn, 
+and as specified in line 12, it'll be “hot pink.” Check it out below:
+---
+from turtle import *
+
+color('dark turquoise') # set color to 'dark turquoise'
+forward(200) # bottom of square
+left(90)
+color('fuchsia') # set color to 'fuchsia'
+forward(200) # right side of square
+left(90)
+color('deep sky blue') # set color to 'deep sky blue'
+forward(200) # top of square
+left(90)
+color('hot pink') # set color to 'hot pink'
+forward(200) # left side of square 
+
+bye()
+--
+multi-colored triangle:
+What color will the left side of the triangle be in this program?
+from turtle import *
+
+color('purple') # Set color to Purple
+forward(200) 
+left(120)
+color('blue') # Set color to Blue
+forward(200) 
+color('magenta') # Set color to Magenta
+left(120)
+color('red') # Set color to Red
+forward(200) # Left side of triangle
+
+bye()
+---
+Is any part of the above drawing magenta? no
+That's correct!
+
+The turtle does change its color to magenta on line 8, 
+but it changes the color to red before drawing the last line, 
+so there's no magenta in the outputted drawing.
+
+However, if you look very closely, 
+the turtle is magenta when it turns left at the top of the triangle.
+
+
