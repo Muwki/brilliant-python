@@ -1,0 +1,54 @@
+Fixing Broken Programs
+The program below is supposed to draw only half a square, 
+where the turtle draws two sides and returns to its starting point like this:
+However, something's wrong with this code. Can you figure out which line is the problem?
+
+from turtle import *
+
+color('blue')
+forward(200)
+left(90) # Option A
+forward(200) # Option B
+left(45) # Option C
+forward(282) # Option D
+
+bye()
+---
+What line needs to be fixed so that 
+the turtle faces its starting point and draws half a square?
+--
+After drawing the vertical side on line 6, the turtle is facing up (north). 
+To get to its starting point, it must face southwest — i.e. 
+turn 135 degrees counterclockwise (to the left) on line 7, not 45 degrees to the left.
+---
+Here's the program running incorrectly. 
+See if you can fix line 7 so that it draws half a square as shown above:
+---
+from turtle import *
+
+color('blue')
+forward(200)
+left(90)
+forward(200)
+left(45)  # Incorrect command
+forward(282)
+
+bye()
+The correct line should read left(135) to complete the half-a-square drawing.
+--
+Here's another test of your understanding:
+Can you figure out what this program is drawing?
+from turtle import *
+
+color('blue')
+forward(200)
+left(60)
+forward(200)
+left(60)
+forward(200)
+
+bye()
+This time, the turtle is only turning left by 60 degrees instead of 90. 
+So the opening angle of the path will actually be wider than for a square.
+After three moves and two turns, the turtle has traced out three sides of a regular hexagon.
+
