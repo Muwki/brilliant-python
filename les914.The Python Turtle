@@ -1,0 +1,76 @@
+The Python Turtle
+Let's try Python Turtle drawing, 
+where programs control a metaphoric “turtle” that moves around the screen dragging a paintbrush:
+
+Some of the programming concepts will be ideas we've already seen, 
+but it can still be helpful to review them in a new context.
+Here's a Python Turtle program. Run the code to see how it behaves:
+from turtle import *
+forward(300)
+bye()
+output is een ___________________>
+> aan het eind is de turtle.
+The turtle appears in the animation as a small triangle,
+starting in the center and moving.
+------
+Our drawings are a result of the turtle's movements viewed from above:
+----------
+The turtle will always be facing east, or to your right, when the program begins. 
+The only way for you to get this information was to run the code.
+Sometimes there are instructions that you can read to see all the details of 
+what a command is supposed to do. Sometimes you just need to experiment to understand what code is doing.
+-------
+Reading and interpreting code is a difficult but important skill.
+Take a look at this code and try to decide on the best English description of what it does:
+
+from turtle import *
+forward(200)
+left(90)
+forward(100)
+
+bye()
+--
+The Turtle starts facing east, or to the right.
+
+The Turtle will go forward in whichever direction it's facing.
+Since the Turtle always starts facing east (or right), 
+the English description of the command is that it'll “go forward, to the right.
+------------
+In English, how would you describe this program?
+
+from turtle import *
+
+forward(200)
+left(90)
+forward(100)
+
+bye()
+output:
+Go forward, then turn left, and then go forward by half that distance.
+---
+The turtle goes east (or right, or forward) at first, by 200 pixels. 
+Then she turns to the left by 90 degrees 
+(toward the north) so she goes north (forward) by 100 pixels, 
+half the distance she went before.
+
+If one of the answers had been “go east (right), 
+and then go north by half that distance,” that would have also been correct. 
+There's usually more than one way to explain what a piece of code is doing.
+----
+from turtle import *
+
+forward(200)
+left(90)
+forward(100)
+
+bye()
+___________|
+---------
+Reading code is a difficult skill that we'll practice throughout this course. 
+Even the best programmers need time and patience to learn how to read code well.
+
+
+
+
+
+
