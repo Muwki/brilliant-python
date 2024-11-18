@@ -1,0 +1,51 @@
+Practicing the find Command
+Gauge your understanding of 
+the find command with the programs below:
+What do you think will be the output of this program?
+
+test_string = "tested, testing, tests, test"
+print(test_string.find("sted")) 
+--
+The string “sted” is contained in “tested,” 
+so the program outputs the index 2.
+--
+The string “sted” is contained in “tested,” so the program returns 2:
+--
+test_string = "tested, testing, tests, test"
+print(test_string.find("sted")) 
+2
+-----
+What do you think will be the output of this program?
+test_string = "tested, testing, tests, test"
+print(test_string.find("tess"))
+
+Each of the characters of “tess” appear individually in “tests,”
+but not as a single chunk, so we get -1.
+----
+Each of the characters of “tess” appear individually in the test_string, 
+but never as a single chunk, so the program returns -1:
+
+test_string = "tested, testing, tests, test"
+print(test_string.find("tess"))
+-1
+------
+What do you think will be the output of this program?
+test_string = "tested, testing, tests, test"
+print(test_string.find("test")) 
+---
+Explanation
+The string “test” is at the very start of test_string, so the position returned is zero.
+
+The string “test” shows up four times in the test_string. However, 
+the find function returns the first instance of the string we are looking for. 
+So, in this program, it'll return 0:
+--
+test_string = "tested, testing, tests, test"
+print(test_string.find("test")) 
+0
+--
+The find function is useful if you're looking for a specific set of characters in a string,
+but since it only returns the first instance of the search term, it has limited functionality.
+
+If we wanted to find the other occurrences of test in the above program,
+we would have to use other functions like count and rstring.
