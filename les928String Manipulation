@@ -1,1 +1,29 @@
 String Manipulation
+Another way to slice strings is to access every character before or after an index.
+You can access every character after the starting index by leaving out the ending index.
+
+To get “equivocal” from the string "Unequivocal" stored in str1, you can just write str1[2:]:
+
+str1 = "Unequivocal"
+str2 = str1[2:]
+print(str2)
+equivocal
+--
+Similarly, we can get every character before 
+the selected index by leaving out the starting index:
+
+str1 = "Goldfish"
+str2 = str1[:4]
+print(str2)
+Gold
+---
+str1 = "Goldfish"
+str2 = str1[4:]
+print(str2)
+fish
+--
+Explanation
+The string “fish” starts at index 5 and continues to the end of the string,
+so you can simply write str1[4:] to extract the substring.
+---
+In combination, find and slicing open up many new possibilities to manipulate strings.
