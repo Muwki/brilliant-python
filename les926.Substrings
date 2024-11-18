@@ -1,0 +1,63 @@
+Substrings
+It's usually more useful to extract an 
+entire section of a string instead of a single character.
+
+Continuous sections of one or more characters are known as substrings.
+
+Substrings are defined by their starting and ending indices:
+
+string =   Learning
+           01234567
+substring   earn
+            12345
+    startindex is bij 1 en end index is bij 5
+
+The starting index of a substring is the index of its first character,
+while the ending index is the first index which is not part of the substring
+----
+To get the substring between the starting and ending indices, 
+include both numbers in brackets after the original string, separated by a colon:
+word = "learning"
+print(word[1:5])
+earn
+---
+Here's another example, which extracts the substring "boss" from "embossed". 
+It starts at index 2 and ends at index 6:
+
+word = "embossed"
+print(word[2:6])
+boss
+------
+Another way of thinking about these indices is this:
+- The starting index is the number of characters to the left of the substring.
+- Adding the substring's length to the starting index gives the ending index.
+----------
+Will this program output “limb”?  no
+word = "climb"
+print(word[2:6])
+imb
+The substring "limb" starts at index 1 and ends at index 5:
+--------
+Complete this program with the starting and 
+ending indices so it outputs the substring "team"
+ = "steamer"
+start = 1 
+end = 5   
+print(word[start:end])
+
+By counting, we can see that the "t" in “team” is at index 1, 
+so its starting index is definitely 1.
+
+We can also count the number of characters before the "m" to find that it's at index 4.
+The ending index will be one past this, since it's not included in the substring. So the ending index will be 5.
+----------
+The "t" in “team” is at index 1 and is four letters long, so start = 1 and end = 5:
+
+word = "steamer"
+start = 1
+end = 5
+print(word[start:end])
+team
+
+
+
