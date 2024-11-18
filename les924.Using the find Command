@@ -1,0 +1,127 @@
+Using the find Command
+As compared with the functions used for the lessons on Turtles, 
+you'll notice that the syntax of str1.find(str2) is different from the previous ones used.
+
+terminology
+We call commands like these — that use the dot notation — methods. 
+They are essentially functions that are only defined in the 
+context of some variable (more precisely, an object) in the program.
+
+For now, you don't need to worry about the difference in terminology,
+and we'll simply refer to them as functions.
+
+One practical benefit is that the proper 
+syntax str1.find(str2) reads more like a sentence:
+
+“Inside str1, find str2.”
+---
+Sometimes the string you're searching for
+shows up in multiple places in str1.
+
+What do you think this program will output?
+str1 = "XOXOXOXOXO"
+print(str1.find("OX"))
+When there are multiple instances of the string, 
+find returns the first of these occurrences.
+
+In this program it prints 1, 
+since the first instances of "OX" begins at index 1:
+str1 = "XOXOXOXOXO"
+print(str1.find("OX"))
+1
+-----
+Predict the output of find for this string:
+What index will be printed?
+str1 = "Hi hey hello he." 
+str2 = "he"
+print(str1.find(str2))
+--
+In this case, the first occurrence of the letters "he" in "Hi hey hello he."
+is in the first two letters of "hey". 
+So, we'll end up with the index of "h" in "hey" from our sentence.
+
+Again, we find this by counting upward from 0, giving us an answer of 3. Or, 
+simply count how many characters there are to the left of "he" ("H", "i", and " ").
+--
+What do you think will happen if we run this code?
+str1 = "parts"
+str2 = "ps"
+print(str1.find(str2))
+---
+For str1.find(str2) to work, 
+str2 needs to be contained in str1 as a 
+continuous sequence of characters.
+
+If this isn't true, find() returns a default value of -1.
+
+str1 = "parts"
+str2 = "ps"
+print(str1.find(str2))
+-1
+Since "ps" is never present as a whole in "parts", the find function returns -1.
+--
+Positions are always non-negative integers, 
+so -1 was chosen by Python's creators to represent the failure to find str2 inside str1.
+--
+Suppose that you're trying to find occurrences of "per" in a document.
+--
+For which snippet would the find("per") command return a negative number?
+---
+str1 = "superior"
+str2 = "Perfect"
+str3 = "personally"
+str4 = "miles per gallon"
+
+print(str1.find("per"))
+print(str2.find("per"))
+print(str3.find("per"))
+print(str4.find("per"))
+
+str1.find("per") returns a negative number only when there are no occurrences of “per” in str1. 
+By going through the words character by character, 
+we can find “per” in “personally,” “miles per gallon,” and “superior,” 
+so we know that we won't get a negative number from them.
+
+However, even though “Perfect” starts with “Per,” it doesn't have the correct capitalization. 
+As a result, find will overlook the beginning and return -1 instead of an index.
+
+The find command is case sensitive, so when the str2.find("per") command is run, 
+the program doesn't find a match:
+
+str1 = "superior"
+str2 = "Perfect"
+str3 = "personally"
+str4 = "miles per gallon"
+
+print(str1.find("per"))
+print(str2.find("per"))
+print(str3.find("per"))
+print(str4.find("per"))
+2
+-1
+0
+6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
