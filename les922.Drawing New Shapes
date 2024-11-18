@@ -1,0 +1,94 @@
+Drawing New Shapes
+This program draws a 5-sided star pentagon.
+Press “Run” and read the comments to better understand it:
+----
+the fill commmand
+As a new feature, you might have noticed that 
+this program shows how a turtle can draw filled shapes.
+The color command determines the fill color, 
+and whatever code is in-between begin_fill() and end_fill() is what gets filled in.
+---
+from turtle import *
+speed(5)
+width(5)
+
+color('red', 'yellow') # Two inputs: a stroke color and a fill color.
+
+begin_fill() # Start of a filled shape.
+for i in range(5): # Repeat 5 times
+    # The turning angle is chosen so that the star closes in on itself after five turns.
+    right(180 - 36) # Turning angle 
+    forward(200)
+end_fill() # Fills in the shape it has been drawing
+    
+hideturtle()
+bye()
+--
+Modify this program so that it draws a star heptagram, or 7-sided star:
+--
+What should line 8 be changed to so that we draw 7 sides instead of 5?
+
+from turtle import *
+speed(5)
+width(5)
+
+color('red', 'yellow') 
+
+begin_fill() 
+for i in range(5):
+    right(180 - 36) 
+    forward(200)
+end_fill() 
+    
+hideturtle()
+bye()
+---
+To create a 7-sided star, we need to make 7 turns instead of 5:
+----
+To create a 7-sided star, we need to make 7 turns instead of 5. 
+To do that, we change the number of times the turtle loops to 7.
+----
+from turtle import *
+speed(5)
+width(5)
+
+color('red', 'yellow')
+
+begin_fill()
+for i in range(7):  # Changed to range(7)
+    right(180 - 36)
+    forward(200)
+end_fill()
+    
+hideturtle()
+bye()
+--
+The turning angle was based on a 5-sided star, and now needs to be updated for a 7-sided star.
+---
+Which command could be inserted in line 9 in the program above to draw a 7-sided star?
+--
+The right turning angle for a 7-sided star is
+                                                 180∘ − 180∘/7,
+which you can try out yourself. There are number of solutions that would work since:
+                                                 180 ∘/ 7 ≈25.7 and 180∘ - 25.7∘ 154.3∘.
+
+The other answer choices would only work for stars with fewer sides.
+-------
+Here's our 7-sided star:
+from turtle import *
+speed(5)
+width(5)
+
+color('red', 'yellow')
+
+begin_fill()
+for i in range(7):  # Changed to 7
+    right(180 - 180/7) # Updated for 7 sides
+    forward(200)
+end_fill()
+    
+hideturtle()
+bye()
+--
+These functions, together with for-loops and simple math, 
+allow us to draw all kinds of beautiful shapes and patterns.
