@@ -1,0 +1,55 @@
+Built-in Python Functions
+Here is the find command. Take a guess at what you think this program might output:
+
+str1 = "parts"
+str2 = "art"
+print(str1.find(str2))
+
+The find function is used to locate letters (or words) in a string of text.
+
+---
+The command str1.find(str2) gives the first position in str1 
+where str2 occurs. Run this code to see for yourself:
+str1 = "parts"
+str2 = "art"
+print(str1.find(str2))
+1
+--
+The code snippet prints 1 because that's the “position” of "art" in "parts".
+--
+The number we get from str1.find(str2) is called an index — 
+a number which describes the position where str2 starts in str1.
+
+The index of an item is determined by its numbered place in a string starting at 0 (not 1):
+
+      parts
+      01234
+The index of a single character is its number, 
+and the index of str2 is the place in str1 where the first character of str2 is found.
+---
+What index would this code return?
+str1 = "Is it going well?" 
+str2 = "go"
+print(str1.find(str2))
+
+When we write str1.find(str2), we're asking the computer to find 
+the first place in str1 where str2 occurs.
+In the sentence “Is it going well?”, the string “go” appears for 
+the first and only time at the beginning of “going.” 
+So, the number we end up with will be the index of the “g” at the beginning of “going.” 
+Counting upward from the first character, starting from zero, we find that the index is 6, making that our answer.
+
+Note: For Python, spaces are characters just like letters, 
+so we have to count them when we're finding the index of anything in the string.
+--
+In the code below, the string “go” appears 
+at the beginning of “going” which starts at index 6:
+
+str1 = "Is it going well?" 
+str2 = "go"
+print(str1.find(str2))
+6
+
+
+
+
