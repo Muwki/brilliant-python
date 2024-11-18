@@ -1,0 +1,96 @@
+Drawing with Loops
+This program directs a turtle that draws a line. 
+It's attempting to draw the letter C, 
+but the turning angle inputted to the left commands need to be adjusted:
+---
+from turtle import *
+width(5)
+
+left(180) # Orients the Turtle left
+
+forward(50)
+left(10)    # Turning angle
+forward(50)
+left(10)    # Turning angle
+forward(50)
+left(10)    # Turning angle
+forward(50)
+left(10)    # Turning angle
+forward(50)
+
+hideturtle()
+bye()
+---
+What range is appropriate for the turning angle inputted to draw a C?
+
+Try out various angles as arguments for left — lines 7, 9, 11, and 13 — 
+but the same in each line. If you start at 10 degrees and increase the angle by 10 degrees
+each time, you'll see that for 40 and 50 degrees, a letter C
+can be recognized. Angles below 40 or above 50 make the letter look unnatural or unrecognizable:
+---
+To figure out the proper angle, the best way is to guess and check with the inputs for left — lines 7, 9, 11, and 13:
+
+from turtle import *
+width(5)
+
+left(180)
+
+forward(50)
+left(45)    # Turning angle
+forward(50) 
+left(45)    # Turning angle
+forward(50)
+left(45)    # Turning angle
+forward(50) 
+left(45)    # Turning angle
+forward(50) 
+
+hideturtle()
+bye()
+
+For angles between 40 and 50 degrees, a letter C can be recognized.
+Editing the turning angle in four different places sure is tedious.
+----
+Here's a more compact version of the previous program that uses a for loop. 
+Read the program's comments, and then run it:
+
+from turtle import *
+width(5)
+
+left(180)
+
+# Start of for loop.
+for i in range(5): # Code below is repeated 5 times
+    # Code to be repeated 
+    forward(50) # Indentation indicates code is inside the loop
+    left(45) # Still inside the for loop
+# No more indentation! Marks the end of the for-loop.
+hideturtle()
+bye()
+Remember that i and range on line 7 determine how many times the loop will repeat.
+------
+The commands forward(100) and left(45) will be repeated 5 times over. The for loop
+for i in range(5):
+    forward(100)
+    left(45)
+
+is therefore shorthand for this:
+forward(100)
+left(45)
+forward(100)
+left(45)
+forward(100)
+left(45)
+forward(100)
+left(45)
+forward(100)
+left(45)
+---
+A couple of reminders about working with for loops:
+The number that we put inside range() in the line for i in range(5) 
+is what determines the number of times the loop will repeat.
+Only the code that's indented below the for loop will be repeated (or “looped” over).
+Code inside the for loop needs to be indented in a consistent way.
+The end of the indentation marks the end of the for loop.
+--
+
