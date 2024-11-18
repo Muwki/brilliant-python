@@ -1,0 +1,77 @@
+Drawing Letters
+In the next programs, 
+we'll incorporate new functions that will help the turtle to draw letters.
+
+This program draws the letter D.
+from turtle import *
+
+width(5) 
+left(90)   
+forward(200)
+right(90)
+forward(100)
+right(45)
+forward(71)
+right(45)
+forward(100) 
+right(45)
+forward(71)
+right(45)
+forward(100)
+hideturtle()
+
+bye()
+----------
+What do you think would happen 
+if we changed command width(5) to width(50) on line 3?
+--
+The command width controls the thickness of the turtle's pen, 
+so changing the input from 5 to 50 means that the pen will be much thicker than before:
+
+from turtle import *
+
+width(50) # changed to 50
+left(90)   
+forward(200)
+right(90)
+forward(100)
+right(45)
+forward(71)
+right(45)
+forward(100) 
+right(45)
+forward(71)
+right(45)
+forward(100)
+hideturtle()
+
+bye()
+---
+Here's the same program with the width(50) command added to line 7:
+from turtle import *
+
+width(5) 
+left(90)   
+forward(200)
+right(90)
+width(50) # line added 
+forward(100)
+right(45)
+forward(71)
+right(45)
+forward(100) 
+right(45)
+forward(71)
+right(45)
+forward(100)
+hideturtle()
+
+bye()
+--
+Just like the color command, the width command determines the thickness of everything drawn after it.
+
+In this program, the width is initially set to 5 on line 3 before the straight line of the 
+D is drawn. Then the width is updated to 50 on line 7, 
+which controls the thickness of the rest of the D
+--
+
