@@ -1,0 +1,50 @@
+Slicing
+
+How can you print the substring “love” in this program?
+
+Update line 2 to find the substring of str1 to print “love”
+
+str1 = "What lovely weather we're having!"
+str2 = str1[5:9] # Updated to extract "love"
+print(str2) 
+
+To extract "love" from str1", we first need to find the starting and ending 
+indices of this substring. 
+The letter "l" first appears at index 5, and the word love is 4
+characters long, so we know that str2 = str1[5:9].
+--
+The letter "l" first appears at index 5 
+and the word love is 4 characters long, so we know that str2 = str1[5:9]:
+--
+str1 = "What lovely weather we're having!"
+str2 = str1[5:9] # Updated to extract "love"
+print(str2) 
+love
+--
+Here we're starting with a string in str1 and then copying 
+the substring between two indices into another variable, str2. This is known as slicing.
+
+Let's say that str1 = "scrumptious".
+We then write print(str1[i:j]), where both i and j are integers:
+--
+original = scrumptious
+slice    =  crump
+--
+If the computer prints "crump" as a result, what are the values of i and j?
+
+str1 = "scrumptious"
+# What numbers should be filled in? 
+i = ?
+j = ? 
+str2 = str1[i:j]
+print(str2) # Output: "crump"
+
+explination
+To extract "crump" from "scrumptious", 
+we first need to find the starting and ending indices of this substring. 
+These will be the index of "c" and the index of "p" plus 1, respectively.
+
+By counting up from 0, we find that these indices are 1 and 5 + 1 = 6. 
+So, using the syntax we saw in the previous pane, 
+the numbers we need to put in the brackets are i = 1 and j = 5 + 1 = 6.
+
