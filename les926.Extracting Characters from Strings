@@ -1,1 +1,35 @@
 Extracting Characters from Strings
+The find method returns the index of a character (or string) inside a larger string.
+To get a string's character at a given index, there's a different syntax.
+
+For instance, let's say that str1 = "educational" 
+and we want to access the character at index 4.
+
+We use brackets [] to access or “extract” the character we want:
+str1 = "educational"
+print(str1[4])
+a
+---
+As a reminder, because indices are counted up from zero, 
+index 4 is the fifth position overall, so this program prints a.
+
+What number should we replace 4 with to access the letter n?
+str1 = "educational"
+print(str1[4])
+
+The characters of a string are indexed starting from 0, 
+and the character n is at the ninth position, which is index 8.
+-----
+Suppose that we've already written this code:
+str1 = "annotate"
+print(str1[x])
+
+Here, x stands in for a number. 
+If we want this code to print the letter o, what value should we replace x with?
+
+In order to extract the letter "o" from "annotate", 
+we need to find its index "o" in the string. By counting up from zero 
+(or using str.find("o")), we find that its index is 3.
+
+So the proper value for x is 3.
+
