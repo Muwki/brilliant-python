@@ -1,0 +1,141 @@
+More Turtle Commands
+This program is supposed to draw the Cyrillic letter Ц ('tse'),
+but something went wrong. Can you figure out which line needs to be changed?
+==
+from turtle import *
+
+width(5)     # make the stroke 5 pixels wide
+left(90)     # option A
+forward(200)
+left(90)     # option B
+forward(150)
+left(90)
+forward(200)
+left(180)    # option C
+forward(200)
+left(90)
+forward(30)
+right(90)    # option D
+forward(30)
+hideturtle() # hide the turtle from the final image
+
+bye()
+dit tekent een n met  lust aan de bovenkant ipv de u met de lust aan de onderkant.
+--
+Which line of code can you change to properly draw the Cyrillic letter Ц?
+The letter's shape is already as it's supposed to be — however, 
+it's upside down. This is due to the turtle initially facing up instead of down.
+
+Changing the first turn command (line 4) to make the turtle turn right 
+instead of left fixes the letter's orientation.
+--
+from turtle import *
+
+width(5) # make the stroke 5 pixels wide
+right(90) # updated to replace left(90)
+forward(200)
+left(90)
+forward(150)
+left(90)
+forward(200)
+left(180)
+forward(200)
+left(90)
+forward(30)
+right(90)
+forward(30)
+hideturtle() # hide the turtle from the final image
+
+bye()
+--
+In the above example, after drawing the “U” part of the letter Ц, 
+the turtle turned around and retraced the right stem to reach the lower right corner for the little “hook.”
+--
+It seems like there should be a better way.
+from turtle import *
+
+width(5) 
+right(90)
+forward(200)
+left(90)
+forward(150)
+left(90)
+forward(200)
+left(180)
+forward(200)
+left(90)
+forward(30)
+right(90)
+forward(30)
+hideturtle() # hide the turtle from the final image
+
+bye()
+--
+The function back makes the turtle move 
+backward a given amount of pixels, instead of forward.
+
+back(100) # move 100px backwards
+
+Suppose that we insert one of the following two code snippets in a program. 
+Do they do the same thing?
+-----
+from turtle import *
+
+back(100)
+
+bye()
+output: >----------------------
+-----
+from turtle import *
+
+left(180)
+forward(100)
+
+bye()
+output: <--------------------------
+----
+Will these lines of code always produce the same result?
+
+In both cases, the turtle moves to the same spot, 
+but it ends up facing different directions. 
+With back(100), it faces the direction it came from. 
+In the other case, it faces away from the starting point.
+-----
+Another useful function is penup, 
+which makes the turtle lift its 'pen' and stop drawing. 
+It can resume drawing with the function pendown:
+--
+from turtle import *
+
+forward(100)
+penup() # Lift the pen
+forward(100) # Move forward 100 px without drawing.
+left(90) # Turn left 90 degrees
+pendown() # Lower the pen again.
+forward(100) # Move forward 100 px while drawing
+
+bye()
+---
+Even though the functions penup and pendown have no inputs, 
+they still require an empty pair of parentheses to be called:
+-----
+penup   # this is an error!
+penup() # this lifts up the pen
+----
+Which of these is a valid command?
+
+forward()
+pendown
+pendown(5)
+back(180)
+---
+Only one of these commands is valid:
+forward requires exactly one input inside the round brackets. 
+They cannot be left empty — the turtle must know by how much it's supposed to move forward.
+pendown is just the name of a function. It's only called (executed) with pendown().
+pendown takes no inputs. So its pair of round brackets must stay empty.
+back requires exactly one input: for example, back(180).
+------
+There are countless functions in Python. 
+While no one can learn all of them, 
+it's useful to know core functions that you'll use frequently.
