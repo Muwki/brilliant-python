@@ -1,0 +1,82 @@
+Step Size
+What do you think will happen if we give range three inputs?
+from turtle import *
+
+for i in range(5, 50, 5):
+    forward(i)
+    left(90)
+
+bye()
+
+It will change the value of i by 5 each time.
+
+That's correct!
+The third input to range is the step size — 
+how many numbers to jump in between each loop.
+So, this program will start with i at 5, 
+then next it'll be 10, then 15, and so on until it reaches 50:
+
+Here's a slightly different program:
+What will be the first three values of i in this program?
+
+from turtle import *
+
+for i in range(10, 100, 10):
+    forward(i)
+    left(90)
+
+bye()
+In this program, the start value is 10, the stop value is 100, and the step size is 10.
+Explanation
+When the range function has three inputs, the first is the start value, 
+the second is the stop value, and the third input is the step size.
+In this program, the start value is 10, the stop value is 100, and the step size is 10:
+for i in range(10, 100, 10):
+    forward(i)
+    left(90)
+So the first value of i is the start value, which is 10. 
+Then it increases by the step size which is 10, so the next value is 20. Then the third value is 30.
+
+--------
+So the first value of i is 10, the next is 20, then 30, and so on:
+-------------------
+How many times does this program execute the loop?
+
+from turtle import *
+
+for i in range(10, 100, 10):
+    forward(i)
+    left(90)
+
+bye()
+
+Recall that when the range function has three inputs,
+the first is the start value, the second is the stop value, 
+and the third input is the step size.
+
+Explanation
+Recall that when the range function has three inputs,
+the first is the start value,
+the second is the stop value, and
+the third input is the step size.
+The program starts at 10, then steps by 10 between each loop, 
+and goes until it reaches 100 (but doesn't include it).
+Since the stop value is exclusive, the loop runs 9 times.
+
+-----------
+This program starts i with a value of 10, then “steps” 
+by 10 between each loop, and stops at 100 but doesn't include it. 
+So this loop will run 9 times:
+
+from turtle import *
+
+for i in range(10, 100, 10):
+    # Uncomment the line below see value of i
+    # print(i) 
+    forward(i)
+    left(90)
+
+bye()
+----------
+
+
