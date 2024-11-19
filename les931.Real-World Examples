@@ -1,0 +1,37 @@
+Real-World Examples
+A simple use case for replace is creating more personalized emails.
+
+Suppose we have this program:
+email = "Hello [Insert Name Here]. I'd like to personally thank you for your contribution." 
+# insert line of code
+print(email)
+Hello [Insert Name Here]. I'd like to personally thank you for your contribution.
+--
+Which line can be inserted to transform our email into something specifically addressed to a person named Emily?
+email = email.replace("[Insert Name Here]", "Emily")
+--
+Explanation
+To replace the string "[Insert Name Here]" with "Emily", use the syntax email.replace("[Insert Name Here]",
+"Emily") in order to create a new string with the appropriate replacements and assign it to the variable email.
+--
+email = "Hello [Insert Name Here]. I'd like to personally thank you for your contribution." 
+# Run the replacement to insert Emily
+email = email.replace("[Insert Name Here]", "Emily")
+# Print the updated email
+print(email)
+Hello Emily. I'd like to personally thank you for your contribution.
+---
+Note that replace will create an entirely new string, without changing email. 
+In order to overwrite the old contents of email with the new output, we assign the result of the replace call to email
+---
+To replace the string "[Insert Name Here]" with "Emily", 
+we need to first run the proper replace function, and then assign the output to the variable email:
+---
+email = "Hello [Insert Name Here]. I'd like to personally thank you for your contribution." 
+# Run the replacement to insert Emily
+email = email.replace("[Insert Name Here]", "Emily")
+# Print the updated email
+print(email)
+Hello Emily. I'd like to personally thank you for your contribution.
+
+The replace function is a very useful tool for working with strings.
