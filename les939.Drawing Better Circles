@@ -1,0 +1,72 @@
+Drawing Better Circles
+So far, our program can successfully draw circles of different sizes,
+but not all of the circles are drawn around the center of the turtle.
+
+from turtle import *
+
+width(2)
+
+def circle(size):
+    penup()
+    forward(200)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(size)
+        left(6)
+    right(90)
+    penup()
+    back(200)
+    pendown()
+
+circle(10)
+circle(20)
+
+bye()
+
+Increasing the size argument also increases the radius of the circle traced out. 
+However, inside circle, 
+the turtle moves to and from the center assuming a fixed radius (forward(200), back(200)).
+
+Explanation
+The function circle, as defined, assumes a radius of 200 pixels. When we increase the size, 
+the circle's circumference gets longer. So the circle increases in size and its radius no longer matches the 200 pixels.
+
+The radius should be responsive to the step size value that's inputted for the function circle.
+We know that the perimeter of a circle is 2πr (where r is the radius) 
+and that the program approximates a circle with 60 short straight segments on length step:
+
+What do you think is the right mathematical formula that expresses the step length in terms of the radius r?
+Since the perimeter is 2π times the radius r and is divided into 60 small steps, the step size is
+
+2πr/60 = 30/πr
+​
+Using this insight, we can update the movement of the turtle before and 
+after drawing the circle to reflect the inputted size of the circle:
+
+from turtle import *
+
+width(2)
+
+def circle(size):
+    penup()
+    forward(size*30/3.14) # Updated line
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(size)
+        left(6)
+    right(90)
+    penup()
+    back(size*30/3.14) # Updated line
+    pendown()
+
+# Drawing centered circles 
+circle(10)
+circle(20)
+
+bye()
+twee cirkels met 2 verschillende diameters onafhankelijk van elkaar.
+
+Don't worry too much if the math doesn't make sense to you — 
+the important thing is that we can now draw centered circles of any size.
