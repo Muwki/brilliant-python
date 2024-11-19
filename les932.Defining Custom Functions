@@ -1,0 +1,90 @@
+Defining Custom Functions
+One of the most powerful programming tools is writing custom functions.
+These share many of the features of built-in functions but are completely customizable.
+Let's explore them by returning to turtle drawings.
+
+So instead of writing
+for i in range(10):
+    forward(15)
+    left(9)
+we could just write this:
+left_turn()
+Suppose we want to teach the turtle a 
+left_turn command that runs this code:
+
+from turtle import *
+
+for i in range(10):
+    forward(15)
+    left(9)
+    
+bye()
+--
+Do you think this program will work?
+from turtle import *
+
+left_turn()
+    
+bye()
+No, because the turtle has no way of knowing what left_turn() is supposed to do.
+No, because the function left_turn() needs an input.
+---
+When we run the above program, it outputs an error message:
+
+name 'left_turn' is not defined
+This error means that Python doesn't recognize left_turn as the name of either a 
+built-in function or one of those imported from the “turtle” module.
+
+To teach the turtle a new function, we need to define it.
+Take a look at this code (and the comments). It's called the function definition:
+
+# Defining a custom function named "left_turn"
+def left_turn():
+    # Start of left_turn's definition 
+    for i in range(10): 
+        forward(15)
+        left(9)
+        # End of the for loop 
+    # End of left_turn's definition
+
+# Rest of the program below
+---------
+A function definition always starts with the syntax of 
+def, followed by the name of the function, a set of parentheses (), and a colon :.
+
+The code inside the function definition needs to be indented. 
+The end of the indentation is the end of the function definition.
+-----
+What do you think will be the output when we run this program?
+# Defining a custom function named "left_turn"
+def left_turn():
+    # Start of left_turn's definition 
+    for i in range(10): 
+        forward(15)
+        left(9)
+        # End of the for loop 
+    # End of left_turn's definition
+
+# Rest of the program below
+It will draw a part of a circle as defined in left_turn.
+----
+So far, we have defined the function, 
+but we haven't actually called it yet, so nothing will happen.
+
+Once the function has been defined, we can then carry out a function call:
+from turtle import *
+
+# This is the function definition 
+def left_turn():
+    # Start of left_turn's definition 
+    for i in range(10): 
+        forward(15)
+        left(9)
+        # End of the for loop 
+    # End of left_turn's definition
+
+# This is the function call.
+left_turn()
+    
+bye()
+When the function call is executed, it runs the code inside of the function definition.
