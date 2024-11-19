@@ -1,0 +1,42 @@
+The Replace Function
+Another useful built-in string function is replace.
+
+Suppose we have the string "It will be rainy today.
+" that's assigned to the variable forecast, and we wish to adjust the forecast to a sunny one:
+example:                sunny
+             it will be         today
+                        rainy
+The replace function returns a new string in which
+all instances of one substring are replaced with another substring.
+
+In order to print "It will be sunny today.", we then simply write this:
+forcast.replace("rainy","sunny")
+--
+forecast = "It will be rainy today."
+new_forecast = forecast.replace("rainy", "sunny") 
+print(forecast) # Original forecast
+print(new_forecast) # New forecast
+It will be rainy today.
+It will be sunny today.
+----
+What will be printed when this program is run?
+greeting = "goodbye, and say hello"
+print(greeting.replace("goodbye", "hello"))
+hello, and say hello
+----
+Explanation
+When calling replace, three strings need to be specified:
+
+the string we're working in,
+
+the target string (string to search for), and
+
+the replacement string.
+
+The syntax is working_string.replace(target_string, replacement_string), 
+and when we run this command, the result is a new string in which all instances 
+of target_string in working_string are replaced with replacement_string.
+
+The command used here is greeting.replace(“goodbye”, “hello”), 
+so we'll end up with a string in which all instances of "goodbye" in "goodbye,
+and say hello" have been replaced with "hello". This is "hello, and say hello".
