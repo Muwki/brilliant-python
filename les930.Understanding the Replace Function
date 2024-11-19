@@ -1,1 +1,98 @@
 Understanding the Replace Function
+Let's take a closer look at how the replace function works.
+What will be printed when this program is run?
+
+test_string = "The replacement will be arriving shortly"
+new_string = test_string.replace("shortly", "now")
+
+print(test_string)
+print(new_string)
+The replacement will be arriving shortly 
+and The replacement will be arriving now
+--
+Explanation
+There are two print statements — one to output test_string on line 4,
+and one to output new_string on line 5.
+The test_string is unchanged, so the first thing outputted is
+The replacement will be arriving shortly.
+The new_string is the result of replacing shortly in test_string with now, 
+so the next line outputted is The replacement will be arriving now.
+--
+There are two print statements — one to output test_string on line 4,
+and one to output new_string on line 5.
+
+The test_string is unchanged, but the new_string is 
+the result of the replace function that swaps out shortly for now:
+---------
+test_string = "The replacement will be arriving shortly"
+new_string = test_string.replace("shortly", "now") # Replaces shortly with now in test_string
+
+print(test_string) # Unchanged
+print(new_string) # Result of replace function
+
+The replacement will be arriving shortly
+The replacement will be arriving now
+---
+It's important to notice that the replace function creates
+and returns a new string, but it doesn't change the original:
+
+old_string = "the old string"
+new_string = old_string.replace("old", "new")
+
+print(old_string)
+print(new_string)
+
+print("We replaced " + old_string + " with " + new_string)
+the old string
+the new string
+We replaced the old string with the new string
+--
+If the replace function is called and the output
+isn't saved to a variable, then it simply disappears:
+-
+old_string = "the old string"
+old_string.replace("old", "new") # This is lost
+
+print(old_string)
+
+# The line below would now cause an error 
+# print(new_string) 
+# Next line would also cause an error
+# print("We replaced " + old_string + " with " + new_string)
+the old string
+----
+What will be printed by the following code?
+
+words = "red fish"
+words.replace("red", "blue")
+print(words)
+print(words.replace("red", "blue"))
+red fish and blue fish
+---
+Explanation
+The command replace doesn't change the word it's acting on. 
+As a result, the first time we run replace, there's no effect and print(words) 
+will simply print the original string, red fish.
+
+The variable words is still unchanged when we run replace a second time,
+but this time we're directly printing the results of the replace command instead of trying to print words.
+So, we do see the replacement the second time, and we'll see red fish and then blue fish printed.
+----
+The first time we run replace on line 2, there's no effect.
+We do see the replacement on line 4 
+when we embed the replace in the print statement:
+-
+words = "red fish"
+words.replace("red", "blue")
+print(words)
+print(words.replace("red", "blue"))
+red fish
+blue fish
+--
+It should be noted that, in the above code, we don't save the result of
+words.replace("red", "blue") in a variable, so it couldn't be used again.
+---
+
+
+
+
