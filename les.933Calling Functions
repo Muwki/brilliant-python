@@ -1,0 +1,70 @@
+Here's the same program for left_turn except 
+the function call is now above the function definition:
+
+from turtle import *
+
+# This is the function call.
+left_turn()
+
+# This is the function definition 
+def left_turn():
+    for i in range(10): 
+        forward(15)
+        left(9)
+
+bye()
+--
+What do you think the program will output?,  The program will cause an error.
+--
+The function definition must be above the function call, otherwise the program will get an error:
+from turtle import *
+
+# This is the function call.
+left_turn()
+
+# This is the function definition 
+def left_turn():
+    for i in range(10): 
+        forward(15)
+        left(9)
+
+bye()
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+NameError: name 'left_turn' is not defined
+
+The order of commands is very important when writing programs.
+----
+Let's say we wanted to draw a semi-circle using the left_turn command we just defined.
+What do you think this program will output?
+from turtle import *
+
+def left_turn(): 
+    for i in range(10):
+        left(9)     
+        forward(15) 
+left_turn() 
+left_turn() 
+
+bye()
+That's correct!
+This program will call left_turn twice to draw a semi-circle:
+-------
+One of the great powers of functions is that they're 
+reusable — define it once, and call it as many times as desired.
+---
+For instance, we can draw a full circle by calling left_turn four times:
+from turtle import *
+
+def left_turn(): 
+    for i in range(10):
+        left(9)     
+        forward(15) 
+
+left_turn() 
+left_turn() 
+left_turn()
+left_turn()
+
+bye()
+
