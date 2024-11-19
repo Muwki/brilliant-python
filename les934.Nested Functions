@@ -1,0 +1,225 @@
+Another powerful feature is that functions can be built out of other functions.
+
+Let's build a program to draw flowers.
+Each flower is composed of five petals. Each petal consists of two left turns with a filling:
+
+Here's a program that defines a new function — petal.
+Notice how petal references the previously defined left_turn:
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+# This is the definition of left_turn, as before.
+def left_turn(): 
+    for i in range(10):
+        forward(15)
+        left(9)
+
+# This is definition of petal        
+def petal():
+    begin_fill()
+    left_turn() # Calls the left_turn function
+    left(90)
+    left_turn() # Calls left_turn again 
+    end_fill()
+
+bye()
+What do you think this program will output?
+You might think that calling left_turn in petal would cause an error, but that's actually a valid command.
+As long as left_turn is defined above petal, Python can use custom functions inside of other custom function definitions.
+While there won't be an error, the program still won't draw anything.
+
+What's missing?
+The function petal is defined, but never actually called.
+--Explanation
+Remember that a function's definition simply explains the meaning of its name. 
+That way, whenever petal is being called, the computer can look up the sequence of commands it stands for.
+
+But in our program, petal is never called after being defined. 
+So, the computer knows how to draw a petal, but we never asked it to actually draw one. 
+Therefore, all that needs to be done is to add the function call petal() before the final bye() on line 18.
+---------
+Here's the program with the function call included on line 21:
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+# Definition of left_turn, as before.
+def left_turn(): 
+    for i in range(10):
+        forward(15)
+        left(9)
+
+# Definition of petal        
+def petal():
+    begin_fill()
+    left_turn() # Calls the left_turn function
+    left(90)
+    left_turn() # Calls left_turn again 
+    end_fill()
+
+# Now we have the petal function call
+petal()
+
+bye()
+-------
+Remember that the function call needs to go below the function definition, 
+otherwise the program won't work.
+
+Now let's draw a whole flower, which consists of five petals.
+
+The following program calls petal five times, while turning by a fifth of a turn after each call.
+This should draw a flower like this, right?
+
+Well, not exactly.
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+def left_turn():
+    for i in range(10):
+        forward(15)
+        left(9)
+        
+def petal():
+    begin_fill()
+    left_turn()    # option A
+    left(90)       # option B
+    left_turn()
+    end_fill()
+
+for i in range(5): # option C
+    petal()
+    right(360/5)
+        
+bye()
+---
+Explanation
+After drawing a single petal, the turtle is no longer facing the same direction as before.
+In fact, it has turned a total of times 90 degrees, or 270 degrees, to the left.
+Add to that the right turn of 72 degrees (360 degrees divided by 5)
+and the angle between petals is 198 degrees, not 72 degrees as intended.
+
+The situation can be remedied most simply by making sure that petal() 
+no longer has the side effect of changing the turtle's overall orientation. 
+Add a final left(90) at the end of petal's definition, and the turtle will again face the direction when it started drawing the petal. 
+Then, turning by 72 degrees in between the petal() calls will make the petals actually that far apart.
+
+The problem with our program above was that the call to petal() had the side effect of changing the turtle's overall orientation.
+--
+To fix this, we add another left(90) command at the end of the definition of the petal function:
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+def left_turn():
+    for i in range(10):
+        forward(15)
+        left(9)
+        
+def petal():
+    begin_fill()
+    left_turn()    
+    left(90)       
+    left_turn()
+    left(90) # Line added 
+    end_fill()
+
+for i in range(5): 
+    petal()
+    right(360/5)
+        
+bye()
+
+Because functions get reused and nested, one small mistake can have big consequences.
+
+But it also makes fixing the problem relatively easy.
+
+Now that our program can draw a flower, the next step is to 
+define a function flower that contains the part that actually draws the flower.
+
+Identify that part of the code responsible for drawing a flower:
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+def left_turn():
+    for i in range(10):
+        forward(15)
+        left(9)
+        
+def petal():
+    begin_fill()
+    left_turn()
+    left(90)
+    left_turn()
+    end_fill()
+    left(90)
+
+for i in range(5):
+    petal()
+    right(360/5)
+        
+bye()
+Which part of the program should contain the function definition for flower?
+Explanation
+The “meat” of the program is just in the lines 19 to 21, after the two function definitions. 
+It points back to the definition of petal (which itself points back to left_turn), 
+but those parts of the program don't need to be included in the definition of flower. 
+Just as before, the definition of left_turn lies outside the definition of petal.
+
+Therefore, the lines 19 to 21
+
+for i in range(5):
+    petal()
+    right(360/5)
+get replaced by
+
+def flower():
+    for i in range(5):
+        petal()
+        right(360/5)
+followed by the call to flower().
+------
+Now we can easily draw as many flowers as we would like:
+
+from turtle import *
+
+hideturtle()
+color('black', 'magenta')
+
+def left_turn():
+    for i in range(10):
+        forward(15)
+        left(9)
+        
+def petal():
+    begin_fill()
+    left_turn()
+    left(90)
+    left_turn()
+    end_fill()
+    left(90)
+
+# Defining the flower function 
+def flower():
+    for i in range(5):
+        petal()
+        right(360/5)
+        
+flower() # Calling the flower function
+        
+bye()
+--
+Try editing the code above to draw multiple flowers.
+--
