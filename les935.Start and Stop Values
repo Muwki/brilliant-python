@@ -1,1 +1,75 @@
 Start and Stop Values
+Up until now, we've used the for loop without 
+completely understanding how it works.
+
+Take a look at this program and what it draws:
+from turtle import *
+
+for i in range(1, 50):
+    forward(5*i) # Multiply value of i by 5
+    left(90)
+
+bye()
+
+Notice how the amount the turtle moves forward
+in each run of the loop changes based on the value of i.
+
+How many pixels does the turtle move during 
+the first three times through the loop?    5, 10, 15
+The turtle moves in between turns by 5, then 10, then 15 pixels, and so on, 
+as i takes on the values 1, 2, 3, etc. because we are multiplying it by 5 (on line 4):
+----
+from turtle import *
+
+for i in range(1, 50):
+    forward(5*i) # Multiply value of i by 5
+    left(90)
+
+bye()
+
+The first time through the loop, the value for i is 1:
+
+forward(5*1) # 5
+then it's 2:
+
+forward(5*2) #10
+then it's 3:
+
+forward(5*3) #15
+-----
+The way the range function works is that the first input specifies 
+the number to start at, and the second input determines the number to stop at.
+--
+This program outputs the value of i each time through the loop
+using a print statement to show how i changes:
+
+from turtle import *
+
+for i in range(1, 50):
+    print(i) # Prints value of i during each loop 
+    forward(5*i)
+    left(90)
+
+bye()
+-----------
+In the spiral program, the variable i starts at the first number inputted to the range function, 
+which is 1. Each time through the loop it goes up by 1 until it reaches the second number.
+--
+If you look carefully, the last number for i is 49, not 50.
+That's because the stop value (i.e. the second number specified in the input)
+to range is exclusive, so it's not actually included.
+---
+What do you think the first value of i will be when 
+line 3 is modified so that the range function only has one input?  0
+
+from turtle import *
+
+for i in range(50): # Line changed 
+    forward(5*i)
+    left(90)
+If only one number is inputted to the range function,
+it'll start at 0 by default and end at the number specified as the input:
+---
+While the program's output will look nearly identical,
+the first time through the loop the value of i will be 0 instead of 1,
+so the loop will actually run one more time than it did before.
