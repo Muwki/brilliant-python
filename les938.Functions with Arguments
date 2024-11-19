@@ -1,1 +1,205 @@
 Functions with Arguments
+The custom functions in our programs thus far have lacked a crucial feature.
+
+It's evident by comparing a custom function call
+left_turn()
+with a built-in command such as this:
+forward(20)
+
+In a built-in function, there's an input for how far it'll go forward, 
+but in a custom function there's no way of controlling how much it'll curve to the left.
+
+The 20 in the call forward(20) is called a function argument — 
+for simplicity, these are also referred to as function inputs.
+
+Let's see how to define functions that include arguments.
+Here's a definition for a circle function:
+from turtle import *
+
+width(2)
+
+def circle():
+    penup()
+    forward(50)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(5)
+        left(6)
+    right(90)
+    penup()
+    back(50)
+    pendown()
+
+circle()
+
+bye()
+
+This program only draws a circle of one size.
+------
+If we want to be able to change the size of the circle, which line(s) should we adjust?
+
+from turtle import *
+
+width(2)
+
+def circle():
+    penup()
+    forward(50)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(5)
+        left(6)
+    right(90)
+    penup()
+    back(50)
+    pendown()
+
+circle()
+
+bye()
+
+Lines 7 and 15 serve to orient the circle around the turtle, 
+but it's line 11 that actually controls the size of the circle.
+
+Explanation
+Lines 7 and 15 serve to orient the circle around the turtle, 
+but it's line 11 that actually controls the size of the circle.
+
+Try changing line 11 to see for yourself:
+from turtle import *
+
+width(2)
+
+def circle():
+    penup()
+    forward(200)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(5) # Controls size
+        left(6)
+    right(90)
+    penup()
+    back(200)
+    pendown()
+
+circle()
+
+bye()
+---
+
+To draw a circle of any size, we can use a function argument:
+from turtle import *
+
+def circle(size): # Argument added in parentheses
+    penup()
+    forward(200)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(size) # Argument being used 
+        left(6)
+    right(90)
+    penup()
+    back(200)
+    pendown()
+
+bye()
+
+The argument is specified in the first line of 
+the function definition in the parentheses on line 3.
+
+Then that argument can be used throughout the program as a variable, 
+serving as a placeholder for a value.
+--
+In the function call, we need to add a number in the parentheses to be used for size.
+Read through the program's comments, and then press “Run”:
+
+from turtle import *
+
+width(2)
+
+# Function definition 
+def circle(size): # Argument added in parentheses
+    penup()
+    forward(200)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(size) # Argument used in the program
+        left(6)
+    right(90)
+    penup()
+    back(200)
+    pendown()
+
+# Function calls
+# Draws a circle with size of 10
+circle(10) # Argument size replaced with 10 everywhere
+
+# Draws a circle with size of 20
+circle(20) # Argument size replaced with 20 everywhere
+
+bye()
+kleine en grote circle
+---
+Everywhere in the program that the argument size shows up, 
+it gets replaced with the value in the function call. So, 
+size can be understood as a variable.
+
+In the program above, the first circle is drawn with a size of 10,
+and the next circle is drawn with a size of 20.
+
+----
+For this lesson, we've used the term arguments. 
+Technically, this isn't quite right.
+
+In a function definition, the contents of the brackets are called parameters,
+not arguments. It's a small but subtle distinction:
+Parameter:
+def circle(radius): # here radius is a parameter
+
+Argument:
+circle(20) # here 20 is an argument
+
+It's a question of point of view — is it about the function from
+the “inside” (the function definition) or from the “outside” (the function call)?
+--
+What do you think will happen if we try to call 
+the function without an argument?
+
+from turtle import *
+
+def circle(size): # Argument added in parentheses
+    penup()
+    forward(200)
+    pendown()
+    left(90)
+    for i in range(60):
+        forward(size) # Argument being used 
+        left(6)
+    right(90)
+    penup()
+    back(200)
+    pendown()
+    
+circle()
+bye()
+
+Traceback (most recent call last):
+  File "<stdin>", line 16, in <module>
+TypeError: circle() missing 1 required positional argument: 'size'
+
+Since the function definition of circle has an argument size in it,
+calling the function without an argument will cause an error:
+
+-------
+The error caused by this program means that the function circle as 
+specified in its definition needs an argument to work:
+
+TypeError: circle() missing 1 required positional argument: 'size'
+---------
+
+
