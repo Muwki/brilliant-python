@@ -1,0 +1,17 @@
+python from cmd
+python code kan ook schrijven in notepad en saven als .py om later te runnen via cmd.
+in cmd enter python spatie drag en drop python file (saved .py)
+
+check py version in cmd
+type python version
+
+run python directly from python program
+klik de python icon in programs en type de commands to run
+
+pytho editors
+ide = integraded developer inveronment
+easy to write en run code
+on apple= xcode
+andriod = adriod studio
+in ruby= rubymine
+microsoft= visualstudiocode
