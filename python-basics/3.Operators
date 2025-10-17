@@ -1,0 +1,11 @@
+je kan spaties tussen de operators plaatsen
+2+3 =  2  +  3
+5/2= 5 gedeeld door 2
+5**2 5 tot de tweede macht
+5//2 (floor) geeft als resultat alleen de hele getal van de deling
+5%2 (remainder)geeft het rest gedeelte van de deling.
+2+2*3= 8
+python gebruikt default order of operation, multiplication komt voor optellen en aftrekken
+ezels brugetje is pemdas  plaese excuse my dear aunt sally
+parentesis     exponent      multiplication  division      aunt                sally
+()          tot de macht      X*              /         +addition              -substraction
